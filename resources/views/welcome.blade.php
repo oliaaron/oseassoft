@@ -118,7 +118,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <a href="#" class="flex-shrink-0">
-                        <img src="{{ asset('images/logo.png') }}" alt="OseasSoft" style="height: 40px; max-width: 180px; width: auto; object-fit: contain;">
+                        <img src="{{ asset('images/logo.png') }}" alt="OseasSoft" style="height: 52px; max-width: 260px; width: auto; object-fit: contain;">
                     </a>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-8">
