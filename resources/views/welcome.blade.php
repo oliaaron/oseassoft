@@ -110,8 +110,135 @@
                 text-transform: uppercase;
             }
         </style>
+        /* Demo Modal */
+        .demo-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .demo-modal-overlay.active { display: flex; }
+        .demo-modal {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            width: 90%;
+            max-width: 440px;
+            position: relative;
+            animation: modalIn 0.3s ease;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.92) translateY(20px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .demo-modal h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.25rem; }
+        .demo-modal .subtitle { color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .cred-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .cred-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        .cred-value { font-family: monospace; font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+        .copy-btn {
+            background: rgba(99,102,241,0.2);
+            border: 1px solid rgba(99,102,241,0.4);
+            color: #a5b4fc;
+            border-radius: 8px;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .copy-btn:hover { background: rgba(99,102,241,0.4); }
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.05);
+            border: none;
+            color: #94a3b8;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-close:hover { background: rgba(255,255,255,0.1); color: white; }
+        .go-demo-btn {
+            display: block;
+            width: 100%;
+            margin-top: 1.5rem;
+            padding: 0.875rem;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .go-demo-btn:hover { opacity: 0.9; }
+        .btn-probar {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: rgba(99,102,241,0.15);
+            border: 1px solid rgba(99,102,241,0.35);
+            border-radius: 8px;
+            color: #a5b4fc;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-probar:hover { background: rgba(99,102,241,0.3); color: white; }
+    </style>
     </head>
     <body class="antialiased bg-slate-900 text-slate-100">
+
+        <!-- Demo Modal -->
+        <div class="demo-modal-overlay" id="demoModal">
+            <div class="demo-modal">
+                <button class="modal-close" onclick="closeDemoModal()">✕</button>
+                <div id="modalAccentBar" style="height:4px; border-radius:4px; margin-bottom:1.5rem; background: linear-gradient(90deg,#6366f1,#8b5cf6);"></div>
+                <h3 id="modalTitle">Demo</h3>
+                <p class="subtitle">Usá estas credenciales para explorar el sistema libremente.</p>
+                <div class="cred-box">
+                    <div>
+                        <div class="cred-label">Usuario</div>
+                        <div class="cred-value" id="modalEmail">—</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyText('modalEmail', this)">Copiar</button>
+                </div>
+                <div class="cred-box">
+                    <div>
+                        <div class="cred-label">Contraseña</div>
+                        <div class="cred-value" id="modalPass">—</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyText('modalPass', this)">Copiar</button>
+                </div>
+                <a href="#" id="modalLink" target="_blank" class="go-demo-btn">Ir al Demo →</a>
+            </div>
+        </div>
         
         <!-- Navbar -->
         <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
@@ -176,74 +303,99 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     <!-- Demo 1: Tienda de Ropa -->
-                    <a href="http://tienda.oseassoft.com" target="_blank" class="demo-card demo-ropa">
+                    <div class="demo-card demo-ropa" style="cursor:default;">
                         <span class="badge-live">En Vivo</span>
                         <div class="demo-icon" style="background: rgba(236, 72, 153, 0.15);">
                             👗
                         </div>
                         <h4>Tienda de Ropa</h4>
                         <p>E-commerce completo con catálogo, carrito de compras, checkout con MercadoPago y gestión de inventario.</p>
-                        <span class="demo-btn">
-                            Ver Demo
-                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </span>
-                    </a>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://tienda.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Tienda de Ropa', 'demo@tienda.oseassoft.com', 'Demo2025!', 'http://tienda.oseassoft.com', 'linear-gradient(90deg,#ec4899,#f472b6)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
                     
                     <!-- Demo 2: Restaurante -->
-                    <a href="http://restaurante.oseassoft.com" target="_blank" class="demo-card demo-restaurante">
+                    <div class="demo-card demo-restaurante" style="cursor:default;">
                         <span class="badge-live">En Vivo</span>
                         <div class="demo-icon" style="background: rgba(249, 115, 22, 0.15);">
                             🍽️
                         </div>
                         <h4>Restaurante</h4>
                         <p>Control de mesas, comandas a cocina, delivery, reservas online y reportes de ventas por turno.</p>
-                        <span class="demo-btn">
-                            Ver Demo
-                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </span>
-                    </a>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://restaurante.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Restaurante', 'demo@restaurante.oseassoft.com', 'Demo2025!', 'http://restaurante.oseassoft.com', 'linear-gradient(90deg,#f97316,#fb923c)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
                     
                     <!-- Demo 3: Peluquería/Spa -->
-                    <a href="http://salon.oseassoft.com" target="_blank" class="demo-card demo-peluqueria">
+                    <div class="demo-card demo-peluqueria" style="cursor:default;">
                         <span class="badge-live">En Vivo</span>
                         <div class="demo-icon" style="background: rgba(168, 85, 247, 0.15);">
                             💇
                         </div>
                         <h4>Peluquería & Spa</h4>
                         <p>Agenda de turnos, fichas de clientes, catálogo de servicios y venta de productos de belleza.</p>
-                        <span class="demo-btn">
-                            Ver Demo
-                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </span>
-                    </a>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://salon.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Peluquería & Spa', 'demo@salon.oseassoft.com', 'Demo2025!', 'http://salon.oseassoft.com', 'linear-gradient(90deg,#a855f7,#c084fc)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
                     
                     <!-- Demo 4: Kiosco/Almacén -->
-                    <a href="http://kiosco.oseassoft.com" target="_blank" class="demo-card demo-kiosco">
+                    <div class="demo-card demo-kiosco" style="cursor:default;">
                         <span class="badge-live">En Vivo</span>
                         <div class="demo-icon" style="background: rgba(34, 197, 94, 0.15);">
                             🏪
                         </div>
                         <h4>Kiosco & Almacén</h4>
                         <p>Ventas rápidas con lector de códigos, control de stock, proveedores y alertas de reposición.</p>
-                        <span class="demo-btn">
-                            Ver Demo
-                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </span>
-                    </a>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://kiosco.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Kiosco & Almacén', 'demo@kiosco.oseassoft.com', 'Demo2025!', 'http://kiosco.oseassoft.com', 'linear-gradient(90deg,#22c55e,#4ade80)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
                     
                     <!-- Demo 5: Servicio Profesional -->
-                    <a href="http://servicios.oseassoft.com" target="_blank" class="demo-card demo-profesional">
+                    <div class="demo-card demo-profesional" style="cursor:default;">
                         <span class="badge-live">En Vivo</span>
                         <div class="demo-icon" style="background: rgba(59, 130, 246, 0.15);">
                             💼
                         </div>
                         <h4>Servicios Profesionales</h4>
-                         <p>Gestión de clientes, facturación de servicios, presupuestos, seguimiento de proyectos y cobros.</p>
-                        <span class="demo-btn">
-                            Ver Demo
-                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </span>
-                    </a>
+                        <p>Gestión de clientes, facturación de servicios, presupuestos, seguimiento de proyectos y cobros.</p>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://servicios.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Servicios Profesionales', 'demo@servicios.oseassoft.com', 'Demo2025!', 'http://servicios.oseassoft.com', 'linear-gradient(90deg,#3b82f6,#60a5fa)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
                     
                 </div>
                 
@@ -355,5 +507,32 @@
             </div>
         </footer>
 
+        <script>
+            function openDemoModal(title, email, pass, link, accent) {
+                document.getElementById('modalTitle').textContent = 'Demo — ' + title;
+                document.getElementById('modalEmail').textContent = email;
+                document.getElementById('modalPass').textContent = pass;
+                document.getElementById('modalLink').href = link;
+                document.getElementById('modalAccentBar').style.background = accent;
+                document.getElementById('demoModal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeDemoModal() {
+                document.getElementById('demoModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            function copyText(elementId, btn) {
+                const text = document.getElementById(elementId).textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    const orig = btn.textContent;
+                    btn.textContent = '✓ Copiado';
+                    setTimeout(() => btn.textContent = orig, 1500);
+                });
+            }
+            // Close on backdrop click
+            document.getElementById('demoModal').addEventListener('click', function(e) {
+                if (e.target === this) closeDemoModal();
+            });
+        </script>
     </body>
 </html>
