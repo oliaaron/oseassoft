@@ -109,7 +109,6 @@
                 border-radius: 20px;
                 text-transform: uppercase;
             }
-        </style>
         /* Demo Modal */
         .demo-modal-overlay {
             display: none;
