@@ -250,18 +250,27 @@
         <!-- Navbar -->
         <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
-                    <a href="#" class="flex-shrink-0">
-                        <img src="{{ asset('images/logo.png') }}" alt="OseasSoft" style="height: 52px; max-width: 260px; width: auto; object-fit: contain;">
-                    </a>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-8">
-                            <a href="#hero" class="hover:text-indigo-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-                            <a href="#services" class="hover:text-indigo-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
-                            <a href="#demos" class="hover:text-indigo-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Demos</a>
-                            <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-indigo-500/30">Contáctanos</a>
-                        </div>
+                <div class="flex items-center justify-between h-20">
+                    
+                    <!-- Lado Izquierdo (Links) -->
+                    <div class="flex-1 hidden md:flex justify-start space-x-8">
+                        <a href="#hero" class="hover:text-indigo-400 font-medium">Inicio</a>
+                        <a href="#services" class="hover:text-indigo-400 font-medium">Servicios</a>
                     </div>
+                    
+                    <!-- LOGO CENTRADO -->
+                    <div class="flex-shrink-0 flex justify-center flex-1">
+                        <a href="#" class="inline-block">
+                            <img src="{{ asset('images/logo.png') }}" alt="OseasSoft" style="height: 60px; max-width: 280px; width: auto; object-fit: contain;">
+                        </a>
+                    </div>
+
+                    <!-- Lado Derecho (Botones) -->
+                    <div class="flex-1 hidden md:flex justify-end items-center space-x-6">
+                        <a href="#demos" class="hover:text-indigo-400 font-medium">Demos</a>
+                        <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-bold transition-all shadow-lg hover:shadow-indigo-500/30">Contáctanos</a>
+                    </div>
+                    
                 </div>
             </div>
         </nav>
@@ -406,7 +415,7 @@
                     
                 </div>
                 
-                <div class="text-center mt-32 pt-10 mb-12 max-w-2xl mx-auto bg-slate-800/40 p-8 rounded-3xl border border-slate-700/50 shadow-2xl relative z-10">
+                <div class="text-center mb-12 max-w-2xl mx-auto bg-slate-800/40 p-8 rounded-3xl border border-slate-700/50 shadow-2xl relative z-10" style="margin-top: 8rem !important; padding-top: 2.5rem !important; clear: both;">
                     <p class="text-slate-300 text-lg md:text-xl font-medium tracking-wide leading-relaxed">
                         ¿Tu negocio es diferente? <br class="sm:hidden">
                         <a href="#contact" class="text-indigo-400 hover:text-indigo-300 font-bold transition-colors underline decoration-2 underline-offset-4">Contáctanos</a> 
@@ -426,8 +435,8 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Service 1 -->
-                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-indigo-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10">
-                        <div class="w-20 h-20 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-indigo-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10" style="min-height: 280px !important;">
+                        <div class="bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors transform group-hover:scale-110 duration-300" style="width: 80px; height: 80px; font-size: 3rem;">
                             💻
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Punto de Venta</h4>
@@ -435,17 +444,17 @@
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
-                        <div class="w-20 h-20 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10" style="min-height: 280px !important;">
+                        <div class="bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors transform group-hover:scale-110 duration-300" style="width: 80px; height: 80px; font-size: 3rem;">
                             📦
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Inventario</h4>
-                        <p class="text-slate-400 text-base leading-relaxed">Control total de tu stock, alertas de reposición, variantes de producto y gestión proveedores.</p>
+                        <p class="text-slate-400 text-base leading-relaxed">Control total de tu stock, alertas de reposición, variantes y gestión proveedores.</p>
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
-                        <div class="w-20 h-20 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10" style="min-height: 280px !important;">
+                        <div class="bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors transform group-hover:scale-110 duration-300" style="width: 80px; height: 80px; font-size: 3rem;">
                             🛍️
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Tienda Online</h4>
@@ -453,8 +462,8 @@
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-pink-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10">
-                        <div class="w-20 h-20 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-pink-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10" style="min-height: 280px !important;">
+                        <div class="bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-colors transform group-hover:scale-110 duration-300" style="width: 80px; height: 80px; font-size: 3rem;">
                             📊
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Reportes Claros</h4>
