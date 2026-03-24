@@ -419,7 +419,9 @@
                     
                 </div>
                 
-                <div style="margin-top: 150px; margin-bottom: 50px; clear: both; width: 100%; display: block;">
+                </div>
+                
+                <div style="margin-top: 60px; margin-bottom: 50px; clear: both; width: 100%; display: block;">
                     <div class="text-center max-w-2xl mx-auto bg-slate-800/40 p-8 rounded-3xl border border-slate-700/50 shadow-2xl relative z-10">
                         <p class="text-slate-300 text-lg md:text-xl font-medium tracking-wide leading-relaxed">
                             ¿Tu negocio es diferente? <br class="sm:hidden">
@@ -525,6 +527,11 @@
 
         <footer class="bg-slate-900 py-12 border-t border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; font-size: 2rem;">
+                    <a href="https://wa.me/" target="_blank" style="transition: transform 0.2s; text-decoration: none;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="WhatsApp">📱</a>
+                    <a href="https://instagram.com/" target="_blank" style="transition: transform 0.2s; text-decoration: none;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Instagram">📸</a>
+                    <a href="https://facebook.com/" target="_blank" style="transition: transform 0.2s; text-decoration: none;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Facebook">📘</a>
+                </div>
                 <p class="text-slate-500 text-sm">
                     &copy; {{ date('Y') }} OseasSoft. Todos los derechos reservados.
                 </p>
