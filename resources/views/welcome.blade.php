@@ -211,6 +211,7 @@
         }
         .btn-probar:hover { background: rgba(99,102,241,0.3); color: white; }
     </style>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body class="antialiased bg-slate-900 text-slate-100">
 
@@ -220,22 +221,29 @@
                 <button class="modal-close" onclick="closeDemoModal()">✕</button>
                 <div id="modalAccentBar" style="height:4px; border-radius:4px; margin-bottom:1.5rem; background: linear-gradient(90deg,#6366f1,#8b5cf6);"></div>
                 <h3 id="modalTitle">Demo</h3>
-                <p class="subtitle">Usá estas credenciales para explorar el sistema libremente.</p>
-                <div class="cred-box">
-                    <div>
-                        <div class="cred-label">Usuario</div>
-                        <div class="cred-value" id="modalEmail">—</div>
-                    </div>
-                    <button class="copy-btn" onclick="copyText('modalEmail', this)">Copiar</button>
+                <p class="subtitle" id="modalSubtitle">Ingresá tu email para obtener acceso inmediato al entorno de pruebas.</p>
+
+                <!-- Paso 1: Formulario -->
+                <div id="demoStep1">
+                    <form id="demoForm" onsubmit="submitDemoForm(event)">
+                        <input type="email" id="demoEmailInput" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors mb-4" placeholder="tucorreo@empresa.com">
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-all shadow-lg shadow-indigo-500/25 flex justify-center items-center">
+                            <span id="btnText">Desbloquear Demo</span>
+                            <svg id="btnSpinner" class="animate-spin ml-2 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        </button>
+                    </form>
                 </div>
-                <div class="cred-box">
-                    <div>
-                        <div class="cred-label">Contraseña</div>
-                        <div class="cred-value" id="modalPass">—</div>
+
+                <!-- Paso 2: Credenciales (Éxito) -->
+                <div id="demoStep2" style="display: none; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✉️</div>
+                    <div class="mt-4 p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-lg text-indigo-200">
+                        <p class="mb-2"><strong>¡Accesos Enviados!</strong></p>
+                        <p class="text-sm">Te enviamos el usuario y la contraseña segura a tu casilla de correo.</p>
+                        <p class="text-sm mt-3 opacity-75">Revisá tu bandeja de entrada (y la carpeta de spam por las dudas).</p>
                     </div>
-                    <button class="copy-btn" onclick="copyText('modalPass', this)">Copiar</button>
+                    <button class="go-demo-btn" onclick="closeDemoModal()" style="margin-top: 2rem;">Entendido</button>
                 </div>
-                <a href="#" id="modalLink" target="_blank" class="go-demo-btn">Ir al Demo →</a>
             </div>
         </div>
         
@@ -398,9 +406,11 @@
                     
                 </div>
                 
-                <div class="text-center mt-12">
-                    <p class="text-slate-500 text-sm">
-                        ¿Tu negocio es diferente? <a href="#contact" class="text-indigo-400 hover:underline">Contáctanos</a> y te mostramos cómo adaptamos el sistema a tu rubro.
+                <div class="text-center mt-20 mb-8 max-w-2xl mx-auto bg-slate-800/40 p-6 md:p-8 rounded-3xl border border-slate-700/50 shadow-lg">
+                    <p class="text-slate-400 text-base md:text-lg">
+                        ¿Tu negocio es diferente? <br class="sm:hidden">
+                        <a href="#contact" class="text-indigo-400 hover:text-indigo-300 font-bold transition-colors underline decoration-2 underline-offset-4">Contáctanos</a> 
+                        y te mostramos cómo adaptamos el sistema a tu rubro.
                     </p>
                 </div>
             </div>
@@ -416,39 +426,39 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Service 1 -->
-                    <div class="p-6 bg-slate-900 rounded-2xl border border-slate-700 hover:border-indigo-500/50 transition-colors group text-center">
-                        <div class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:bg-indigo-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-indigo-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10">
+                        <div class="w-20 h-20 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-10 h-10 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-2">Punto de Venta</h4>
-                        <p class="text-slate-400 text-sm">Sistema POS rápido para ventas presenciales con múltiples medios de pago.</p>
+                        <h4 class="text-xl font-extrabold mb-3 text-white">Punto de Venta</h4>
+                        <p class="text-slate-400 text-base leading-relaxed">Sistema POS rápido para ventas presenciales con múltiples medios de pago.</p>
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="p-6 bg-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-colors group text-center">
-                        <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:bg-cyan-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
+                        <div class="w-20 h-20 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-2">Inventario</h4>
-                        <p class="text-slate-400 text-sm">Control de stock, alertas de reposición, variantes de producto y proveedores.</p>
+                        <h4 class="text-xl font-extrabold mb-3 text-white">Inventario</h4>
+                        <p class="text-slate-400 text-base leading-relaxed">Control total de tu stock, alertas de reposición, variantes de producto y gestión proveedores.</p>
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="p-6 bg-slate-900 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-colors group text-center">
-                        <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:bg-purple-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
+                        <div class="w-20 h-20 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-2">Tienda Online</h4>
-                        <p class="text-slate-400 text-sm">E-commerce integrado con catálogo, carrito y pagos con MercadoPago.</p>
+                        <h4 class="text-xl font-extrabold mb-3 text-white">Tienda Online</h4>
+                        <p class="text-slate-400 text-base leading-relaxed">E-commerce integrado con catálogo de productos, carrito y recepción de pagos con MercadoPago.</p>
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="p-6 bg-slate-900 rounded-2xl border border-slate-700 hover:border-pink-500/50 transition-colors group text-center">
-                        <div class="w-14 h-14 bg-pink-500/10 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:bg-pink-500/20 transition-colors">
-                            <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-pink-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10">
+                        <div class="w-20 h-20 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-10 h-10 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-2">Reportes</h4>
-                        <p class="text-slate-400 text-sm">Métricas de ventas, productos más vendidos, clientes frecuentes y más.</p>
+                        <h4 class="text-xl font-extrabold mb-3 text-white">Reportes Claros</h4>
+                        <p class="text-slate-400 text-base leading-relaxed">Métricas de ventas, productos más vendidos, y estadísticas de clientes para tomar decisiones precisas.</p>
                     </div>
                 </div>
             </div>
@@ -507,19 +517,72 @@
         </footer>
 
         <script>
+            let currentDemoData = {};
+
             function openDemoModal(title, email, pass, link, accent) {
+                currentDemoData = { title, email, pass, link };
+                
                 document.getElementById('modalTitle').textContent = 'Demo — ' + title;
-                document.getElementById('modalEmail').textContent = email;
-                document.getElementById('modalPass').textContent = pass;
-                document.getElementById('modalLink').href = link;
                 document.getElementById('modalAccentBar').style.background = accent;
+                
+                // Mostrar Paso 1, Ocultar Paso 2
+                document.getElementById('demoStep1').style.display = 'block';
+                document.getElementById('demoStep2').style.display = 'none';
+                document.getElementById('modalSubtitle').textContent = 'Ingresá tu email para recibir el acceso inmediato al entorno de pruebas.';
+                document.getElementById('demoEmailInput').value = '';
+                
                 document.getElementById('demoModal').classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
+
             function closeDemoModal() {
                 document.getElementById('demoModal').classList.remove('active');
                 document.body.style.overflow = '';
             }
+
+            async function submitDemoForm(e) {
+                e.preventDefault();
+                const email = document.getElementById('demoEmailInput').value;
+                const btnText = document.getElementById('btnText');
+                const btnSpinner = document.getElementById('btnSpinner');
+                
+                btnText.textContent = 'Procesando...';
+                btnSpinner.classList.remove('hidden');
+                
+                try {
+                    // Guardar lead de forma asíncrona
+                    const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+                    if (token) {
+                        fetch('/leads', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': token,
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({ 
+                                email: email, 
+                                product: currentDemoData.title,
+                                source: 'demo_modal',
+                                email_acceso: currentDemoData.email,
+                                pass_acceso: currentDemoData.pass,
+                                link_acceso: currentDemoData.link
+                            })
+                        }).catch(err => console.error(err));
+                    }
+                    
+                    // Pequeña espera artificial para dar feedback visual de proceso
+                    await new Promise(r => setTimeout(r, 600));
+                    
+                    document.getElementById('demoStep1').style.display = 'none';
+                    document.getElementById('demoStep2').style.display = 'block';
+                    document.getElementById('modalSubtitle').textContent = '¡Listo! Usá estas credenciales seguras para explorar el sistema.';
+                } finally {
+                    btnText.textContent = 'Desbloquear Demo';
+                    btnSpinner.classList.add('hidden');
+                }
+            }
+
             function copyText(elementId, btn) {
                 const text = document.getElementById(elementId).textContent;
                 navigator.clipboard.writeText(text).then(() => {
