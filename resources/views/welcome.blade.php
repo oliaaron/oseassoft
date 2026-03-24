@@ -9,9 +9,9 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
         <style>
-            body { font-family: 'Outfit', sans-serif; }
+            body { font-family: 'Playfair Display', serif; }
             
             /* Demo Cards */
             .demo-card {
@@ -406,8 +406,8 @@
                     
                 </div>
                 
-                <div class="text-center mt-20 mb-8 max-w-2xl mx-auto bg-slate-800/40 p-6 md:p-8 rounded-3xl border border-slate-700/50 shadow-lg">
-                    <p class="text-slate-400 text-base md:text-lg">
+                <div class="text-center mt-32 pt-10 mb-12 max-w-2xl mx-auto bg-slate-800/40 p-8 rounded-3xl border border-slate-700/50 shadow-2xl relative z-10">
+                    <p class="text-slate-300 text-lg md:text-xl font-medium tracking-wide leading-relaxed">
                         ¿Tu negocio es diferente? <br class="sm:hidden">
                         <a href="#contact" class="text-indigo-400 hover:text-indigo-300 font-bold transition-colors underline decoration-2 underline-offset-4">Contáctanos</a> 
                         y te mostramos cómo adaptamos el sistema a tu rubro.
@@ -427,8 +427,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Service 1 -->
                     <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-indigo-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10">
-                        <div class="w-20 h-20 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors transform group-hover:scale-110 duration-300">
-                            <svg class="w-10 h-10 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <div class="w-20 h-20 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                            💻
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Punto de Venta</h4>
                         <p class="text-slate-400 text-base leading-relaxed">Sistema POS rápido para ventas presenciales con múltiples medios de pago.</p>
@@ -436,8 +436,8 @@
 
                     <!-- Service 2 -->
                     <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
-                        <div class="w-20 h-20 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors transform group-hover:scale-110 duration-300">
-                            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        <div class="w-20 h-20 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                            📦
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Inventario</h4>
                         <p class="text-slate-400 text-base leading-relaxed">Control total de tu stock, alertas de reposición, variantes de producto y gestión proveedores.</p>
@@ -445,8 +445,8 @@
 
                     <!-- Service 3 -->
                     <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
-                        <div class="w-20 h-20 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors transform group-hover:scale-110 duration-300">
-                            <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        <div class="w-20 h-20 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                            🛍️
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Tienda Online</h4>
                         <p class="text-slate-400 text-base leading-relaxed">E-commerce integrado con catálogo de productos, carrito y recepción de pagos con MercadoPago.</p>
@@ -454,8 +454,8 @@
 
                     <!-- Service 4 -->
                     <div class="p-8 md:p-10 bg-slate-900 rounded-3xl border border-slate-700 hover:border-pink-500/50 transition-all duration-300 group text-center flex flex-col items-center justify-center min-h-[280px] hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10">
-                        <div class="w-20 h-20 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-colors transform group-hover:scale-110 duration-300">
-                            <svg class="w-10 h-10 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <div class="w-20 h-20 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-colors transform group-hover:scale-110 duration-300 text-5xl">
+                            📊
                         </div>
                         <h4 class="text-xl font-extrabold mb-3 text-white">Reportes Claros</h4>
                         <p class="text-slate-400 text-base leading-relaxed">Métricas de ventas, productos más vendidos, y estadísticas de clientes para tomar decisiones precisas.</p>
