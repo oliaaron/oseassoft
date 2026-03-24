@@ -250,25 +250,29 @@
         <!-- Navbar -->
         <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-20">
+                <div class="flex items-center justify-between" style="height: 80px;">
                     
                     <!-- Lado Izquierdo (Links) -->
-                    <div class="flex-1 hidden md:flex justify-start space-x-8">
-                        <a href="#hero" class="hover:text-indigo-400 font-medium">Inicio</a>
-                        <a href="#services" class="hover:text-indigo-400 font-medium">Servicios</a>
+                    <div class="hidden md:block" style="flex: 1;">
+                        <div style="display: flex; gap: 2rem; justify-content: flex-start; align-items: center;">
+                            <a href="#hero" class="hover:text-indigo-400 font-medium">Inicio</a>
+                            <a href="#services" class="hover:text-indigo-400 font-medium">Servicios</a>
+                        </div>
                     </div>
                     
                     <!-- LOGO CENTRADO -->
-                    <div class="flex-shrink-0 flex justify-center flex-1">
-                        <a href="#" class="inline-block">
+                    <div style="flex: 1; text-align: center;">
+                        <a href="#" style="display: inline-block;">
                             <img src="{{ asset('images/logo.png') }}" alt="OseasSoft" style="height: 60px; max-width: 280px; width: auto; object-fit: contain;">
                         </a>
                     </div>
 
                     <!-- Lado Derecho (Botones) -->
-                    <div class="flex-1 hidden md:flex justify-end items-center space-x-6">
-                        <a href="#demos" class="hover:text-indigo-400 font-medium">Demos</a>
-                        <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-bold transition-all shadow-lg hover:shadow-indigo-500/30">Contáctanos</a>
+                    <div class="hidden md:block" style="flex: 1;">
+                        <div style="display: flex; gap: 1.5rem; justify-content: flex-end; align-items: center;">
+                            <a href="#demos" class="hover:text-indigo-400 font-medium">Demos</a>
+                            <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition-all shadow-lg hover:shadow-indigo-500/30" style="padding: 0.5rem 1.25rem; border-radius: 9999px;">Contáctanos</a>
+                        </div>
                     </div>
                     
                 </div>
@@ -415,12 +419,14 @@
                     
                 </div>
                 
-                <div class="text-center mb-12 max-w-2xl mx-auto bg-slate-800/40 p-8 rounded-3xl border border-slate-700/50 shadow-2xl relative z-10" style="margin-top: 8rem !important; padding-top: 2.5rem !important; clear: both;">
-                    <p class="text-slate-300 text-lg md:text-xl font-medium tracking-wide leading-relaxed">
-                        ¿Tu negocio es diferente? <br class="sm:hidden">
-                        <a href="#contact" class="text-indigo-400 hover:text-indigo-300 font-bold transition-colors underline decoration-2 underline-offset-4">Contáctanos</a> 
-                        y te mostramos cómo adaptamos el sistema a tu rubro.
-                    </p>
+                <div style="margin-top: 150px; margin-bottom: 50px; clear: both; width: 100%; display: block;">
+                    <div class="text-center max-w-2xl mx-auto bg-slate-800/40 p-8 rounded-3xl border border-slate-700/50 shadow-2xl relative z-10">
+                        <p class="text-slate-300 text-lg md:text-xl font-medium tracking-wide leading-relaxed">
+                            ¿Tu negocio es diferente? <br class="sm:hidden">
+                            <a href="#contact" class="text-indigo-400 hover:text-indigo-300 font-bold transition-colors underline decoration-2 underline-offset-4">Contáctanos</a> 
+                            y te mostramos cómo adaptamos el sistema a tu rubro.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
