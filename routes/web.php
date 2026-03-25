@@ -26,6 +26,8 @@ Route::post('/leads', function (Request $request) {
     return response()->json(['success' => true]);
 });
 
+Route::redirect('/admin', '/admin/leads');
+
 Route::get('/admin/leads', function () {
     // Autenticación básica HTTP de un solo nivel (sin base de datos)
     if (request()->header('PHP_AUTH_USER') !== 'admin' || request()->header('PHP_AUTH_PW') !== 'Oseas2025!') {
