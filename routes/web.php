@@ -12,16 +12,22 @@ Route::get('/', function () {
 Route::post('/leads', function (Request $request) {
     $request->validate(['email' => 'required|email']);
     
-    // Guardamos el Lead
+    // Guardamos el Lead (siempre, independientemente del correo)
     \App\Models\Lead::create($request->only('email', 'product', 'source'));
 
-    // Enviamos el Correo de Acceso
-    Mail::to($request->email)->send(new DemoAccessMail([
-        'title' => $request->product,
-        'email' => $request->email_acceso,
-        'pass'  => $request->pass_acceso,
-        'link'  => $request->link_acceso
-    ]));
+    // Enviamos el Correo de Acceso (con red de seguridad)
+    try {
+        Mail::to($request->email)->send(new DemoAccessMail([
+            'title' => $request->product,
+            'email' => $request->email_acceso,
+            'pass'  => $request->pass_acceso,
+            'link'  => $request->link_acceso
+        ]));
+    } catch (\Throwable $e) {
+        // El correo falló, pero el lead ya se guardó. Se registra el error.
+        \Illuminate\Support\Facades\Log::error('DemoAccessMail falló: ' . $e->getMessage());
+        return response()->json(['success' => true, 'mail_error' => $e->getMessage()]);
+    }
 
     return response()->json(['success' => true]);
 });
