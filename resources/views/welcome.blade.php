@@ -492,122 +492,120 @@
                     <span class="text-indigo-400 uppercase tracking-widest text-sm font-bold">Planes Flexibles</span>
                     <h2 class="text-4xl font-extrabold text-white mt-2 mb-4">Elige el plan ideal para tu negocio</h2>
                     <p class="text-slate-400 max-w-2xl mx-auto">
-                        Inversión transparente sin sorpresas. Puedes cambiar de plan en cualquier momento a medida que tu negocio crece.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                        Inversión transparente sin sorpresas. Puedes cambiar de plan en cualq                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
                     
                     <!-- Tarjeta 1: Inicio -->
-                    <div class="bg-slate-900/80 backdrop-blur border border-slate-700 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 group relative overflow-hidden">
-                        <div class="mb-8">
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Inicio</h3>
+                    <div class="bg-slate-900/80 backdrop-blur border border-slate-700 rounded-3xl p-6 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 group relative overflow-hidden flex flex-col">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-slate-300 transition-colors">Inicio</h3>
                             <div class="flex items-baseline gap-2">
                                 <span class="text-4xl font-extrabold text-white">$15.000</span>
-                                <span class="text-slate-400">/mes</span>
+                                <span class="text-slate-400 text-xs">/mes</span>
                             </div>
-                            <p class="text-slate-400 mt-3 text-sm">Perfecto para negocios que recién empiezan o necesitan lo esencial.</p>
+                            <p class="text-slate-400 mt-2 text-xs">Lo esencial para tu local físico. Facturación simplificada.</p>
                         </div>
-                        <ul class="space-y-4 mb-8 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <span class="text-cyan-400">✓</span>
-                                <span>Punto de Venta veloz</span>
+                        <ul class="space-y-3 mb-6 text-slate-300 text-xs flex-grow">
+                            <li class="flex items-start gap-2">
+                                <span class="text-slate-500">✓</span><span>Punto de Venta veloz</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-cyan-400">✓</span>
-                                <span>Inventario básico (hasta 1,000 prod.)</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-slate-500">✓</span><span>Inventario (hasta 1,000 prod.)</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-cyan-400">✓</span>
-                                <span>1 Usuario / Caja</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-slate-500">✓</span><span>Soporte por Email/Ticket</span>
                             </li>
-                            <li class="flex items-start gap-3 opacity-50">
-                                <span>×</span>
-                                <span class="line-through">Tienda Online</span>
-                            </li>
-                            <li class="flex items-start gap-3 opacity-50">
-                                <span>×</span>
-                                <span class="line-through">Modo Nocturno exclusivo</span>
+                            <li class="flex items-start gap-2 opacity-40">
+                                <span>×</span><span class="line-through">Tienda Online</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 hover:border-cyan-500 text-center rounded-xl font-bold transition-all text-white">Elegir Inicio</a>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-center rounded-xl font-bold transition-all text-white text-sm mt-auto">Elegir Inicio</a>
                     </div>
 
-                    <!-- Tarjeta 2: Profesional (Recomendado) -->
-                    <div class="bg-gradient-to-b from-indigo-900/50 to-slate-900/80 backdrop-blur rounded-3xl border border-indigo-500 p-8 transform md:scale-105 shadow-2xl shadow-indigo-500/20 relative overflow-hidden group z-10">
-                        <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-indigo-400 to-cyan-400"></div>
+                    <!-- Tarjeta 2: Profesional -->
+                    <div class="bg-slate-900/80 backdrop-blur border border-indigo-500/50 rounded-3xl p-6 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 group relative overflow-hidden flex flex-col">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Profesional</h3>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-extrabold text-white">$30.000</span>
+                                <span class="text-slate-400 text-xs">/mes</span>
+                            </div>
+                            <p class="text-slate-400 mt-2 text-xs">Facturación Electrónica AFIP y catálogo web sin pagos.</p>
+                        </div>
+                        <ul class="space-y-3 mb-6 text-slate-300 text-xs flex-grow">
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-400">✓</span><span>Todo lo de Inicio +</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-400">✓</span><span><strong>Inventario Ilimitado</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-400">✓</span><span>Catálogo Web (Sin cobros)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-400">✓</span><span>Soporte por WhatsApp</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-800 hover:bg-indigo-900/50 border border-indigo-500/50 hover:border-indigo-400 text-center rounded-xl font-bold transition-all text-white text-sm mt-auto">Elegir Profesional</a>
+                    </div>
+
+                    <!-- Tarjeta 3: E-Commerce (Recomendado) -->
+                    <div class="bg-gradient-to-b from-teal-900/60 to-slate-900/90 backdrop-blur rounded-3xl border border-teal-400 p-6 transform lg:scale-105 shadow-2xl shadow-teal-500/20 relative overflow-hidden group z-10 flex flex-col">
+                        <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-teal-400 to-blue-500"></div>
                         
-                        <div class="mb-8">
-                            <div class="inline-block mb-4 bg-indigo-500/20 border border-indigo-400/50 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
+                        <div class="mb-6">
+                            <div class="inline-block mb-3 bg-teal-500/20 border border-teal-400/50 text-teal-300 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
                                 Recomendado
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Profesional</h3>
+                            <h3 class="text-xl font-bold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">E-Commerce</h3>
                             <div class="flex items-baseline gap-2">
-                                <span class="text-5xl font-extrabold text-white">$30.000</span>
-                                <span class="text-slate-400">/mes</span>
+                                <span class="text-4xl sm:text-5xl font-extrabold text-white">$40.000</span>
+                                <span class="text-teal-200 text-xs">/mes</span>
                             </div>
-                            <p class="text-slate-300 mt-3 text-sm">Nuestro plan más popular, con todo lo necesario para crecer y digitalizarte al 100%.</p>
+                            <p class="text-teal-100/70 mt-2 text-xs">Ventas automáticas 24/7. Integra tu tienda con cobros web.</p>
                         </div>
-                        <ul class="space-y-4 mb-8 text-slate-200 text-sm">
-                            <li class="flex items-start gap-3">
-                                <span class="text-indigo-400">✓</span>
-                                <span>Todo lo de Inicio +</span>
+                        <ul class="space-y-3 mb-6 text-slate-100 text-xs flex-grow font-medium">
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-400">✓</span><span>Todo lo de Profesional +</span>
                             </li>
-                            <li class="flex items-start gap-3 font-medium">
-                                <span class="text-indigo-400">✓</span>
-                                <span>Inventario Ilimitado</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-400">✓</span><span><strong>Tienda de Ventas Online</strong></span>
                             </li>
-                            <li class="flex items-start gap-3 font-medium">
-                                <span class="text-indigo-400">✓</span>
-                                <span>Tienda Online (Catálogo web)</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-400">✓</span><span>Cobros con MercadoPago</span>
                             </li>
-                            <li class="flex items-start gap-3 font-medium">
-                                <span class="text-indigo-400">✓</span>
-                                <span>Multi-dispositivo (Hasta 3 Usuarios)</span>
-                            </li>
-                            <li class="flex items-start gap-3 font-medium">
-                                <span class="text-indigo-400">✓</span>
-                                <span>Modo Nocturno 🌙</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-teal-400">✓</span><span>Soporte Prioritario WhatsApp</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="block w-full py-4 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-center rounded-xl font-bold transition-all shadow-lg shadow-indigo-500/30 text-white transform hover:-translate-y-1">Obtener Profesional</a>
+                        <a href="#contact" class="block w-full py-4 px-4 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-center rounded-xl font-bold transition-all shadow-lg shadow-teal-500/30 text-white text-sm mt-auto transform hover:-translate-y-1">Obtener E-Commerce</a>
                     </div>
 
-                    <!-- Tarjeta 3: Premium -->
-                    <div class="bg-slate-900/80 backdrop-blur rounded-3xl border border-slate-700 p-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 group relative overflow-hidden">
-                        <div class="mb-8">
+                    <!-- Tarjeta 4: Premium -->
+                    <div class="bg-slate-900/80 backdrop-blur rounded-3xl border border-slate-700 p-6 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 group relative overflow-hidden flex flex-col">
+                        <div class="mb-6">
                             <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Premium</h3>
                             <div class="flex items-baseline gap-2">
                                 <span class="text-4xl font-extrabold text-white">$60.000</span>
-                                <span class="text-slate-400">/mes</span>
+                                <span class="text-slate-400 text-xs">/mes</span>
                             </div>
-                            <p class="text-slate-400 mt-3 text-sm">El ecosistema definitivo para empresas con volumen y altas exigencias.</p>
+                            <p class="text-slate-400 mt-2 text-xs">Para empresas con alto nivel de operaciones y volumen.</p>
                         </div>
-                        <ul class="space-y-4 mb-8 text-slate-300 text-sm">
-                            <li class="flex items-start gap-3">
-                                <span class="text-purple-400">✓</span>
-                                <span>Todo lo de Profesional +</span>
+                        <ul class="space-y-3 mb-6 text-slate-300 text-xs flex-grow">
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400">✓</span><span>Todo lo de E-Commerce +</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-purple-400">✓</span>
-                                <span>Múltiples Sucursales</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400">✓</span><span><strong>Múltiples Sucursales</strong></span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-purple-400">✓</span>
-                                <span>Roles y Usuarios Ilimitados</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400">✓</span><span>Dominio propio para Tienda</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-purple-400">✓</span>
-                                <span>Dominio propio para Tienda</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-purple-400">✓</span>
-                                <span>Soporte 24/7 VIP</span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400">✓</span><span>Soporte Especialista 24/7 VIP</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 hover:border-purple-500 text-center rounded-xl font-bold transition-all text-white">Elegir Premium</a>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 hover:border-purple-500 text-center rounded-xl font-bold transition-all text-white text-sm mt-auto">Elegir Premium</a>
                     </div>
-
                 </div>
             </div>
         </div>
