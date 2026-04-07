@@ -271,6 +271,7 @@
                     <div class="hidden md:block" style="flex: 1;">
                         <div style="display: flex; gap: 1.5rem; justify-content: flex-end; align-items: center;">
                             <a href="#demos" class="hover:text-indigo-400 font-medium">Demos</a>
+                            <a href="#pricing" class="hover:text-indigo-400 font-medium text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 font-bold">Precios</a>
                             <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition-all shadow-lg hover:shadow-indigo-500/30" style="padding: 0.5rem 1.25rem; border-radius: 9999px;">Contáctanos</a>
                         </div>
                     </div>
@@ -477,6 +478,135 @@
                         <h4 class="text-xl font-extrabold mb-3 text-white">Reportes Claros</h4>
                         <p class="text-slate-400 text-base leading-relaxed">Métricas de ventas, productos más vendidos, y estadísticas de clientes para tomar decisiones precisas.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing Section -->
+        <div id="pricing" class="py-24 bg-gradient-to-b from-slate-800/50 to-slate-900 relative">
+            <!-- Background Elements -->
+            <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl filter mix-blend-screen pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl filter mix-blend-screen pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-indigo-400 uppercase tracking-widest text-sm font-bold">Planes Flexibles</span>
+                    <h2 class="text-4xl font-extrabold text-white mt-2 mb-4">Elige el plan ideal para tu negocio</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">
+                        Inversión transparente sin sorpresas. Puedes cambiar de plan en cualquier momento a medida que tu negocio crece.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                    
+                    <!-- Tarjeta 1: Inicio -->
+                    <div class="bg-slate-900/80 backdrop-blur border border-slate-700 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 group relative overflow-hidden">
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Inicio</h3>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-extrabold text-white">$15.000</span>
+                                <span class="text-slate-400">/mes</span>
+                            </div>
+                            <p class="text-slate-400 mt-3 text-sm">Perfecto para negocios que recién empiezan o necesitan lo esencial.</p>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-slate-300 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="text-cyan-400">✓</span>
+                                <span>Punto de Venta veloz</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-cyan-400">✓</span>
+                                <span>Inventario básico (hasta 1,000 prod.)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-cyan-400">✓</span>
+                                <span>1 Usuario / Caja</span>
+                            </li>
+                            <li class="flex items-start gap-3 opacity-50">
+                                <span>×</span>
+                                <span class="line-through">Tienda Online</span>
+                            </li>
+                            <li class="flex items-start gap-3 opacity-50">
+                                <span>×</span>
+                                <span class="line-through">Modo Nocturno exclusivo</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 hover:border-cyan-500 text-center rounded-xl font-bold transition-all text-white">Elegir Inicio</a>
+                    </div>
+
+                    <!-- Tarjeta 2: Profesional (Recomendado) -->
+                    <div class="bg-gradient-to-b from-indigo-900/50 to-slate-900/80 backdrop-blur rounded-3xl border border-indigo-500 p-8 transform md:scale-105 shadow-2xl shadow-indigo-500/20 relative overflow-hidden group z-10">
+                        <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-indigo-400 to-cyan-400"></div>
+                        <div class="absolute top-4 right-4 bg-indigo-500/20 border border-indigo-400/50 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
+                            Recomendado
+                        </div>
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Profesional</h3>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-5xl font-extrabold text-white">$30.000</span>
+                                <span class="text-slate-400">/mes</span>
+                            </div>
+                            <p class="text-slate-300 mt-3 text-sm">Nuestro plan más popular, con todo lo necesario para crecer y digitalizarte al 100%.</p>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-slate-200 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="text-indigo-400">✓</span>
+                                <span>Todo lo de Inicio +</span>
+                            </li>
+                            <li class="flex items-start gap-3 font-medium">
+                                <span class="text-indigo-400">✓</span>
+                                <span>Inventario Ilimitado</span>
+                            </li>
+                            <li class="flex items-start gap-3 font-medium">
+                                <span class="text-indigo-400">✓</span>
+                                <span>Tienda Online (Catálogo web)</span>
+                            </li>
+                            <li class="flex items-start gap-3 font-medium">
+                                <span class="text-indigo-400">✓</span>
+                                <span>Multi-dispositivo (Hasta 3 Usuarios)</span>
+                            </li>
+                            <li class="flex items-start gap-3 font-medium">
+                                <span class="text-indigo-400">✓</span>
+                                <span>Modo Nocturno 🌙</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-4 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-center rounded-xl font-bold transition-all shadow-lg shadow-indigo-500/30 text-white transform hover:-translate-y-1">Obtener Profesional</a>
+                    </div>
+
+                    <!-- Tarjeta 3: Premium -->
+                    <div class="bg-slate-900/80 backdrop-blur rounded-3xl border border-slate-700 p-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 group relative overflow-hidden">
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Premium</h3>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-extrabold text-white">$60.000</span>
+                                <span class="text-slate-400">/mes</span>
+                            </div>
+                            <p class="text-slate-400 mt-3 text-sm">El ecosistema definitivo para empresas con volumen y altas exigencias.</p>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-slate-300 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="text-purple-400">✓</span>
+                                <span>Todo lo de Profesional +</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-purple-400">✓</span>
+                                <span>Múltiples Sucursales</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-purple-400">✓</span>
+                                <span>Roles y Usuarios Ilimitados</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-purple-400">✓</span>
+                                <span>Dominio propio para Tienda</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-purple-400">✓</span>
+                                <span>Soporte 24/7 VIP</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-slate-800 hover:bg-slate-700 border border-slate-600 hover:border-purple-500 text-center rounded-xl font-bold transition-all text-white">Elegir Premium</a>
+                    </div>
+
                 </div>
             </div>
         </div>
