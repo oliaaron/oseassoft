@@ -492,7 +492,11 @@
                     <span class="text-indigo-400 uppercase tracking-widest text-sm font-bold">Planes Flexibles</span>
                     <h2 class="text-4xl font-extrabold text-white mt-2 mb-4">Elige el plan ideal para tu negocio</h2>
                     <p class="text-slate-400 max-w-2xl mx-auto">
-                        Inversión transparente sin sorpresas. Puedes cambiar de plan en cualq                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
+                        Inversión transparente sin sorpresas. Puedes cambiar de plan en cualquier momento a medida que tu negocio crece.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch text-left">
                     
                     <!-- Tarjeta 1: Inicio -->
                     <div class="bg-slate-900/80 backdrop-blur border border-slate-700 rounded-3xl p-6 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 group relative overflow-hidden flex flex-col">
