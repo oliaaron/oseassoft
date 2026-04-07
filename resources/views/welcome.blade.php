@@ -536,10 +536,11 @@
                     <!-- Tarjeta 2: Profesional (Recomendado) -->
                     <div class="bg-gradient-to-b from-indigo-900/50 to-slate-900/80 backdrop-blur rounded-3xl border border-indigo-500 p-8 transform md:scale-105 shadow-2xl shadow-indigo-500/20 relative overflow-hidden group z-10">
                         <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-indigo-400 to-cyan-400"></div>
-                        <div class="absolute top-4 right-4 bg-indigo-500/20 border border-indigo-400/50 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                            Recomendado
-                        </div>
+                        
                         <div class="mb-8">
+                            <div class="inline-block mb-4 bg-indigo-500/20 border border-indigo-400/50 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
+                                Recomendado
+                            </div>
                             <h3 class="text-xl font-bold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Profesional</h3>
                             <div class="flex items-baseline gap-2">
                                 <span class="text-5xl font-extrabold text-white">$30.000</span>
