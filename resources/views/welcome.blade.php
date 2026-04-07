@@ -499,146 +499,128 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch text-left">
                     
                     <!-- Tarjeta 1: Inicio -->
-                    <div class="bg-slate-800/60 backdrop-blur border border-slate-700/60 rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 hover:border-slate-600 hover:shadow-xl group relative overflow-hidden flex flex-col">
-                        <div class="mb-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Inicio</h3>
-                            <div class="flex items-baseline gap-2 mb-3">
-                                <span class="text-5xl font-black text-white">$15.000</span>
-                                <span class="text-slate-400 text-sm font-medium">/mes</span>
-                            </div>
-                            <p class="text-slate-400 text-sm leading-relaxed">Lo esencial para tu local físico. Facturación simplificada.</p>
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 flex flex-col">
+                        <h3 class="text-lg font-bold text-white">Inicio</h3>
+                        <div class="mt-2 flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold text-white">$15.000</span>
+                            <span class="text-sm font-medium text-slate-400">/mes</span>
                         </div>
-                        <ul class="space-y-4 mb-8 text-slate-300 text-sm flex-grow">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        <p class="text-sm text-slate-400 mt-2">Lo esencial para tu local físico. Facturación simplificada.</p>
+                        <hr class="border-slate-700 my-4">
+                        <ul class="space-y-1 mb-6 text-slate-300">
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Punto de Venta veloz</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Inventario (hasta 1,000 prod.)</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Soporte por Email/Ticket</span>
                             </li>
-                            <li class="flex items-start gap-3 opacity-50">
-                                <svg class="w-5 h-5 text-slate-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                <span class="line-through">Tienda Online</span>
+                            <li class="flex items-center gap-2 text-sm py-1 text-slate-500">
+                                <svg class="w-4 h-4 text-[#6b7280] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                <span>Tienda Online</span>
                             </li>
                         </ul>
-                        <div class="mt-auto">
-                            <a href="#contact" class="block w-full py-4 px-4 bg-slate-900/50 hover:bg-slate-700 border border-slate-600 text-center rounded-xl font-bold transition-all text-white shadow-sm">Elegir Inicio</a>
-                        </div>
+                        <a href="#contact" class="mt-auto block w-full py-3 px-4 bg-slate-700 hover:bg-slate-600 border border-slate-600 hover:border-slate-500 text-center rounded-xl font-bold transition-all text-white text-sm shadow-sm">Elegir Inicio</a>
                     </div>
 
                     <!-- Tarjeta 2: Profesional -->
-                    <div class="bg-slate-800/60 backdrop-blur border border-indigo-500/30 rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 hover:border-indigo-500/80 hover:shadow-2xl hover:shadow-indigo-500/10 group relative overflow-hidden flex flex-col">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 group-hover:from-indigo-500 group-hover:to-purple-500 transition-colors"></div>
-                        <div class="mb-6">
-                            <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-2">Profesional</h3>
-                            <div class="flex items-baseline gap-2 mb-3">
-                                <span class="text-5xl font-black text-white">$30.000</span>
-                                <span class="text-slate-400 text-sm font-medium">/mes</span>
-                            </div>
-                            <p class="text-slate-400 text-sm leading-relaxed">Facturación Electrónica AFIP. Empieza a digitalizar tu alcance.</p>
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 flex flex-col">
+                        <h3 class="text-lg font-bold text-white">Profesional</h3>
+                        <div class="mt-2 flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold text-white">$30.000</span>
+                            <span class="text-sm font-medium text-slate-400">/mes</span>
                         </div>
-                        <ul class="space-y-4 mb-8 text-slate-300 text-sm flex-grow">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        <p class="text-sm text-slate-400 mt-2">Facturación Electrónica AFIP. Empieza a digitalizar tu alcance.</p>
+                        <hr class="border-slate-700 my-4">
+                        <ul class="space-y-1 mb-6 text-slate-300">
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Todo lo de Inicio +</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span><strong>Inventario Ilimitado</strong></span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Catálogo Web (Sin cobros automáticos)</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Soporte por WhatsApp</span>
                             </li>
                         </ul>
-                        <div class="mt-auto">
-                            <a href="#contact" class="block w-full py-4 px-4 bg-indigo-600/10 hover:bg-indigo-600 border border-indigo-500/50 hover:border-indigo-500 text-center rounded-xl font-bold transition-all text-indigo-300 hover:text-white shadow-sm hover:shadow-indigo-500/25">Elegir Profesional</a>
-                        </div>
+                        <a href="#contact" class="mt-auto block w-full py-3 px-4 bg-slate-700 hover:bg-slate-600 border border-slate-600 hover:border-slate-500 text-center rounded-xl font-bold transition-all text-white text-sm shadow-sm">Elegir Profesional</a>
                     </div>
 
                     <!-- Tarjeta 3: E-Commerce (Recomendado) -->
-                    <div class="bg-slate-800/80 backdrop-blur border border-teal-500 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 shadow-2xl shadow-teal-500/20 relative overflow-hidden group z-10 flex flex-col md:scale-[1.02]">
-                        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-teal-400 to-blue-500"></div>
-                        
-                        <!-- Floating Badge -->
-                        <div class="absolute top-0 right-8 transform -translate-y-px">
-                            <div class="bg-gradient-to-r from-teal-500 to-blue-600 text-white text-[10px] sm:text-xs font-black px-4 py-1.5 rounded-b-lg uppercase tracking-wider shadow-md">
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 flex flex-col ring-2 ring-blue-500 relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
                                 Recomendado
-                            </div>
+                            </span>
                         </div>
-
-                        <div class="mb-6 pt-3">
-                            <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400 mb-2">E-Commerce</h3>
-                            <div class="flex items-baseline gap-2 mb-3">
-                                <span class="text-5xl font-black text-white">$40.000</span>
-                                <span class="text-teal-200 text-sm font-medium">/mes</span>
-                            </div>
-                            <p class="text-slate-300 mt-2 text-sm leading-relaxed">Ventas automáticas 24/7. Integra tu tienda online con cobros web.</p>
+                        <h3 class="text-lg font-bold text-white mt-2">E-Commerce</h3>
+                        <div class="mt-2 flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold text-white">$40.000</span>
+                            <span class="text-sm font-medium text-slate-400">/mes</span>
                         </div>
-                        <ul class="space-y-4 mb-8 text-slate-200 text-sm flex-grow font-medium">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        <p class="text-sm text-slate-400 mt-2">Ventas automáticas 24/7. Integra tu tienda online con cobros web.</p>
+                        <hr class="border-slate-700 my-4">
+                        <ul class="space-y-1 mb-6 text-slate-300">
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Todo lo de Profesional +</span>
                             </li>
-                            <li class="flex items-start gap-3 bg-teal-500/10 p-2 rounded-lg -mx-2">
-                                <svg class="w-5 h-5 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span><strong>Tienda de Ventas Online Completa</strong></span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Cobros con MercadoPago</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Soporte Prioritario WhatsApp</span>
                             </li>
                         </ul>
-                        <div class="mt-auto">
-                            <a href="#contact" class="block w-full py-4 px-4 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-center rounded-xl font-bold transition-all shadow-lg shadow-teal-500/40 text-white transform hover:-translate-y-1">Obtener E-Commerce</a>
-                        </div>
+                        <a href="#contact" class="mt-auto block w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 border border-blue-500 text-center rounded-xl font-bold transition-all text-white text-sm shadow-sm">Obtener E-Commerce</a>
                     </div>
 
                     <!-- Tarjeta 4: Premium -->
-                    <div class="bg-slate-800/60 backdrop-blur border border-purple-500/30 rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 hover:border-purple-500/80 hover:shadow-2xl hover:shadow-purple-500/10 group relative overflow-hidden flex flex-col">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 group-hover:from-purple-500 group-hover:to-pink-500 transition-colors"></div>
-                        <div class="mb-6">
-                            <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2">Premium</h3>
-                            <div class="flex items-baseline gap-2 mb-3">
-                                <span class="text-5xl font-black text-white">$60.000</span>
-                                <span class="text-slate-400 text-sm font-medium">/mes</span>
-                            </div>
-                            <p class="text-slate-400 mt-2 text-sm leading-relaxed">El software ideal para empresas con alto nivel de operaciones.</p>
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 flex flex-col">
+                        <h3 class="text-lg font-bold text-white">Premium</h3>
+                        <div class="mt-2 flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold text-white">$60.000</span>
+                            <span class="text-sm font-medium text-slate-400">/mes</span>
                         </div>
-                        <ul class="space-y-4 mb-8 text-slate-300 text-sm flex-grow">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        <p class="text-sm text-slate-400 mt-2">El software ideal para empresas con alto nivel de operaciones.</p>
+                        <hr class="border-slate-700 my-4">
+                        <ul class="space-y-1 mb-6 text-slate-300">
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Todo lo de E-Commerce +</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span><strong>Múltiples Sucursales</strong> consolidadas</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Dominio propio para tu Tienda (`.com`)</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="flex items-center gap-2 text-sm py-1">
+                                <svg class="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 <span>Soporte Técnico Especialista 24/7</span>
                             </li>
                         </ul>
-                        <div class="mt-auto">
-                            <a href="#contact" class="block w-full py-4 px-4 bg-purple-600/10 hover:bg-purple-600 border border-purple-500/50 hover:border-purple-500 text-center rounded-xl font-bold transition-all text-purple-300 hover:text-white shadow-sm hover:shadow-purple-500/25">Elegir Premium</a>
-                        </div>
+                        <a href="#contact" class="mt-auto block w-full py-3 px-4 bg-slate-700 hover:bg-slate-600 border border-slate-600 hover:border-slate-500 text-center rounded-xl font-bold transition-all text-white text-sm shadow-sm">Elegir Premium</a>
                     </div>
                 </div>
             </div>
