@@ -482,31 +482,193 @@
             </div>
         </div>
         <!-- Pricing Section -->
-        <div id="pricing" class="py-24 bg-gradient-to-b from-slate-800/50 to-slate-900 relative">
-            <!-- Background Elements -->
-            <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl filter mix-blend-screen pointer-events-none"></div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl filter mix-blend-screen pointer-events-none"></div>
+        <div id="pricing" class="py-28 relative overflow-hidden" style="background: linear-gradient(160deg, #0f172a 0%, #0d1527 50%, #0f172a 100%);">
+            <!-- Fondo decorativo -->
+            <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <div style="position:absolute;top:10%;left:5%;width:400px;height:400px;background:radial-gradient(circle,rgba(99,102,241,0.12) 0%,transparent 70%);border-radius:50%;filter:blur(40px);"></div>
+                <div style="position:absolute;bottom:5%;right:5%;width:450px;height:450px;background:radial-gradient(circle,rgba(139,92,246,0.10) 0%,transparent 70%);border-radius:50%;filter:blur(40px);"></div>
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,0.06) 0%,transparent 70%);border-radius:50%;filter:blur(60px);"></div>
+            </div>
 
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-10">
-                    <span class="text-indigo-400 uppercase tracking-widest text-sm font-bold">Planes Flexibles</span>
-                    <h2 class="text-4xl font-extrabold text-white mt-2 mb-3">Elige el plan ideal para tu negocio</h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto">
-                        Inversión transparente sin sorpresas. Puedes cambiar de plan en cualquier momento a medida que tu negocio crece.
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Encabezado -->
+                <div class="text-center mb-16">
+                    <span style="display:inline-block;background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(139,92,246,0.2));border:1px solid rgba(99,102,241,0.3);color:#a5b4fc;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.4rem 1.2rem;border-radius:9999px;margin-bottom:1.5rem;">
+                        Inversión Transparente
+                    </span>
+                    <h2 class="text-5xl font-extrabold text-white mb-4" style="line-height:1.15;">
+                        Planes para cada<br>
+                        <span style="background:linear-gradient(135deg,#6366f1,#a855f7,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">etapa de tu negocio</span>
+                    </h2>
+                    <p class="text-slate-400 max-w-xl mx-auto text-base leading-relaxed">
+                        Sin costos ocultos. Cambiá de plan cuando quieras.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch text-left">
-                    
-                    <!-- Tarjeta 1: Inicio -->
-                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 flex flex-col">
-                        <h3 class="text-lg font-bold text-white">Inicio</h3>
-                        <div class="mt-2 flex items-baseline gap-1">
-                            <span class="text-4xl font-extrabold text-white">$15.000</span>
-                            <span class="text-sm font-medium text-slate-400">/mes</span>
+                <!-- Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-end">
+
+                    <!-- INICIO -->
+                    <div style="background:linear-gradient(160deg,rgba(30,41,59,0.9),rgba(15,23,42,0.95));border:1px solid rgba(99,102,241,0.15);border-radius:24px;padding:2rem;display:flex;flex-direction:column;transition:all 0.35s;position:relative;overflow:hidden;"
+                         onmouseover="this.style.transform='translateY(-6px)';this.style.borderColor='rgba(99,102,241,0.4)';this.style.boxShadow='0 20px 50px rgba(99,102,241,0.12)'"
+                         onmouseout="this.style.transform='';this.style.borderColor='rgba(99,102,241,0.15)';this.style.boxShadow=''">
+                        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6366f1,#818cf8);opacity:0.4;border-radius:24px 24px 0 0;"></div>
+                        <!-- Plan label -->
+                        <div style="margin-bottom:1.25rem;">
+                            <span style="font-size:0.7rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#818cf8;">Plan</span>
+                            <h3 style="font-size:1.75rem;font-weight:800;color:white;margin:0.15rem 0 0;">Inicio</h3>
                         </div>
-                        <p class="text-sm text-slate-400 mt-2">Lo esencial para tu local físico. Facturación simplificada.</p>
-                        <hr class="border-slate-700 my-4">
+                        <!-- Price -->
+                        <div style="margin-bottom:1.5rem;">
+                            <div style="display:flex;align-items:baseline;gap:0.25rem;">
+                                <span style="font-size:2.75rem;font-weight:900;color:white;line-height:1;">$15.000</span>
+                                <span style="color:#64748b;font-size:0.9rem;">/mes</span>
+                            </div>
+                            <p style="color:#64748b;font-size:0.82rem;margin-top:0.4rem;">Para negocios nuevos que arrancan</p>
+                        </div>
+                        <!-- Features -->
+                        <ul style="list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#6366f1;font-size:1rem;flex-shrink:0;">✓</span> Punto de Venta (POS)
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#6366f1;font-size:1rem;flex-shrink:0;">✓</span> Inventario (hasta 200 prod.)
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#6366f1;font-size:1rem;flex-shrink:0;">✓</span> Control de Caja y Reportes
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#6366f1;font-size:1rem;flex-shrink:0;">✓</span> Clientes (hasta 50)
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#6366f1;font-size:1rem;flex-shrink:0;">✓</span> 2 Usuarios
+                            </li>
+                        </ul>
+                        <a href="#contact" style="display:block;text-align:center;padding:0.85rem;border:1.5px solid rgba(99,102,241,0.4);border-radius:14px;color:#818cf8;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.25s;"
+                           onmouseover="this.style.background='rgba(99,102,241,0.12)';this.style.borderColor='rgba(99,102,241,0.7)'"
+                           onmouseout="this.style.background='';this.style.borderColor='rgba(99,102,241,0.4)'">
+                            Elegir Inicio
+                        </a>
+                    </div>
+
+                    <!-- PROFESIONAL (Destacado) -->
+                    <div style="background:linear-gradient(160deg,rgba(79,70,229,0.25),rgba(109,40,217,0.15),rgba(15,23,42,0.98));border:1.5px solid rgba(99,102,241,0.55);border-radius:28px;padding:2.25rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transform:translateY(-10px);box-shadow:0 30px 70px rgba(99,102,241,0.2),0 0 0 1px rgba(255,255,255,0.04);"
+                         onmouseover="this.style.boxShadow='0 40px 80px rgba(99,102,241,0.30),0 0 0 1px rgba(255,255,255,0.06)';this.style.borderColor='rgba(129,140,248,0.75)'"
+                         onmouseout="this.style.boxShadow='0 30px 70px rgba(99,102,241,0.2),0 0 0 1px rgba(255,255,255,0.04)';this.style.borderColor='rgba(99,102,241,0.55)'">
+                        <!-- Línea superior animada -->
+                        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6366f1,#a855f7,#6366f1);border-radius:28px 28px 0 0;"></div>
+                        <!-- Badge -->
+                        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);">
+                            <span style="display:inline-block;background:linear-gradient(135deg,#6366f1,#a855f7);color:white;font-size:0.65rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:0 0 12px 12px;box-shadow:0 4px 15px rgba(99,102,241,0.4);">
+                                ★ Más Elegido
+                            </span>
+                        </div>
+                        <!-- Plan label -->
+                        <div style="margin-bottom:1.25rem;margin-top:1rem;">
+                            <span style="font-size:0.7rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#a5b4fc;">Plan</span>
+                            <h3 style="font-size:1.75rem;font-weight:800;color:white;margin:0.15rem 0 0;">Profesional</h3>
+                        </div>
+                        <!-- Price -->
+                        <div style="margin-bottom:1.5rem;">
+                            <div style="display:flex;align-items:baseline;gap:0.25rem;">
+                                <span style="font-size:2.75rem;font-weight:900;color:white;line-height:1;">$30.000</span>
+                                <span style="color:#818cf8;font-size:0.9rem;">/mes</span>
+                            </div>
+                            <p style="color:#8b9dc5;font-size:0.82rem;margin-top:0.4rem;">Para comercios que buscan crecer</p>
+                        </div>
+                        <!-- Features -->
+                        <ul style="list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#e2e8f0;font-size:0.875rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(99,102,241,0.2);">
+                                <span style="color:#a5b4fc;font-size:1rem;flex-shrink:0;">✓</span> <span style="color:#a5b4fc;font-weight:600;">Todo lo de Inicio, más:</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#e2e8f0;font-size:0.875rem;">
+                                <span style="color:#818cf8;font-size:1rem;flex-shrink:0;">✓</span> Inventario y Clientes Ilimitados
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#e2e8f0;font-size:0.875rem;">
+                                <span style="color:#818cf8;font-size:1rem;flex-shrink:0;">✓</span> Devoluciones, Gastos y Descuentos
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#e2e8f0;font-size:0.875rem;">
+                                <span style="color:#818cf8;font-size:1rem;flex-shrink:0;">✓</span> 5 Usuarios con Roles
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#e2e8f0;font-size:0.875rem;">
+                                <span style="color:#818cf8;font-size:1rem;flex-shrink:0;">✓</span> Dominio propio personalizado
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;font-size:0.875rem;">
+                                <span style="color:#818cf8;font-size:1rem;flex-shrink:0;">✓</span>
+                                <span style="background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.3);color:#c7d2fe;padding:0.15rem 0.5rem;border-radius:6px;font-size:0.8rem;font-weight:600;">🌙 Modo Nocturno</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" style="display:block;text-align:center;padding:0.95rem;background:linear-gradient(135deg,#6366f1,#7c3aed);border-radius:14px;color:white;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.25s;box-shadow:0 8px 20px rgba(99,102,241,0.35);"
+                           onmouseover="this.style.opacity='0.9';this.style.boxShadow='0 10px 28px rgba(99,102,241,0.5)'"
+                           onmouseout="this.style.opacity='1';this.style.boxShadow='0 8px 20px rgba(99,102,241,0.35)'">
+                            Elegir Profesional
+                        </a>
+                    </div>
+
+                    <!-- PREMIUM -->
+                    <div style="background:linear-gradient(160deg,rgba(30,41,59,0.9),rgba(15,23,42,0.95));border:1px solid rgba(168,85,247,0.15);border-radius:24px;padding:2rem;display:flex;flex-direction:column;transition:all 0.35s;position:relative;overflow:hidden;"
+                         onmouseover="this.style.transform='translateY(-6px)';this.style.borderColor='rgba(168,85,247,0.4)';this.style.boxShadow='0 20px 50px rgba(168,85,247,0.12)'"
+                         onmouseout="this.style.transform='';this.style.borderColor='rgba(168,85,247,0.15)';this.style.boxShadow=''">
+                        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#a855f7,#c084fc);opacity:0.4;border-radius:24px 24px 0 0;"></div>
+                        <!-- Plan label -->
+                        <div style="margin-bottom:1.25rem;">
+                            <span style="font-size:0.7rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#c084fc;">Plan</span>
+                            <h3 style="font-size:1.75rem;font-weight:800;color:white;margin:0.15rem 0 0;">Premium</h3>
+                        </div>
+                        <!-- Price -->
+                        <div style="margin-bottom:1.5rem;">
+                            <div style="display:flex;align-items:baseline;gap:0.25rem;">
+                                <span style="font-size:2.75rem;font-weight:900;color:white;line-height:1;">$60.000</span>
+                                <span style="color:#64748b;font-size:0.9rem;">/mes</span>
+                            </div>
+                            <p style="color:#64748b;font-size:0.82rem;margin-top:0.4rem;">Para empresas con venta online</p>
+                        </div>
+                        <!-- Features -->
+                        <ul style="list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#e2e8f0;font-size:0.875rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(168,85,247,0.2);">
+                                <span style="color:#c084fc;font-size:1rem;flex-shrink:0;">✓</span> <span style="color:#c084fc;font-weight:600;">Todo lo de Profesional, más:</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#a855f7;font-size:1rem;flex-shrink:0;">✓</span> Tienda Online (E-commerce)
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#a855f7;font-size:1rem;flex-shrink:0;">✓</span> Integración MercadoPago
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#a855f7;font-size:1rem;flex-shrink:0;">✓</span> Agenda de Turnos online
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#a855f7;font-size:1rem;flex-shrink:0;">✓</span> Gestión de Profesionales / Comisiones
+                            </li>
+                            <li style="display:flex;align-items:center;gap:0.6rem;color:#cbd5e1;font-size:0.875rem;">
+                                <span style="color:#a855f7;font-size:1rem;flex-shrink:0;">✓</span> Usuarios Ilimitados
+                            </li>
+                        </ul>
+                        <a href="#contact" style="display:block;text-align:center;padding:0.85rem;border:1.5px solid rgba(168,85,247,0.4);border-radius:14px;color:#c084fc;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.25s;"
+                           onmouseover="this.style.background='rgba(168,85,247,0.12)';this.style.borderColor='rgba(168,85,247,0.7)'"
+                           onmouseout="this.style.background='';this.style.borderColor='rgba(168,85,247,0.4)'">
+                            Elegir Premium
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Footer nota -->
+                <p class="text-center text-slate-500 text-sm mt-10">
+                    💳 Sin permanencia. Podés cambiar o cancelar en cualquier momento.
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
                         <ul class="space-y-1 mb-6 text-slate-300">
                             <li class="flex items-center gap-2 text-sm py-1">
                                 <svg class="text-[#22c55e]" style="width:16px; height:16px; flex-shrink:0;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -617,16 +779,8 @@
                             </li>
                             <li class="flex items-center gap-2 text-sm py-1">
                                 <svg class="text-[#22c55e]" style="width:16px; height:16px; flex-shrink:0;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span>Soporte Técnico Especialista 24/7</span>
-                            </li>
-                        </ul>
-                        <a href="#contact" class="mt-auto block w-full py-3 px-4 bg-slate-700 hover:bg-slate-600 border border-slate-600 hover:border-slate-500 text-center rounded-xl font-bold transition-all text-white text-sm shadow-sm">Elegir Premium</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
-        <!-- Contact Section -->
         <div id="contact" class="py-24 relative overflow-hidden">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="bg-slate-800 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-2xl">
