@@ -83,6 +83,8 @@
             .demo-peluqueria { --accent-color: #a855f7; --accent-secondary: #c084fc; }
             .demo-kiosco { --accent-color: #22c55e; --accent-secondary: #4ade80; }
             .demo-profesional { --accent-color: #3b82f6; --accent-secondary: #60a5fa; }
+            .demo-panaderia { --accent-color: #f59e0b; --accent-secondary: #fbbf24; }
+            .demo-ferreteria { --accent-color: #78716c; --accent-secondary: #a8a29e; }
             
             /* Badge */
             .badge-live {
@@ -413,6 +415,44 @@
                                 <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </a>
                             <button class="btn-probar" onclick="openDemoModal('Servicios Profesionales', 'demo@servicios.oseassoft.com', 'Demo2025!', 'http://servicios.oseassoft.com', 'linear-gradient(90deg,#3b82f6,#60a5fa)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Demo 6: Panadería -->
+                    <div class="demo-card demo-panaderia" style="cursor:default;">
+                        <span class="badge-live">En Vivo</span>
+                        <div class="demo-icon" style="background: rgba(245, 158, 11, 0.15);">
+                            🥐
+                        </div>
+                        <h4>Panadería & Confitería</h4>
+                        <p>Ventas por peso y unidad, control de stock en gramos, recetas del día y caja rápida para mostrador.</p>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://panaderia.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Panadería & Confitería', 'demo@panaderia.oseassoft.com', 'Demo2025!', 'http://panaderia.oseassoft.com', 'linear-gradient(90deg,#f59e0b,#fbbf24)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Demo 7: Ferretería -->
+                    <div class="demo-card demo-ferreteria" style="cursor:default;">
+                        <span class="badge-live">En Vivo</span>
+                        <div class="demo-icon" style="background: rgba(120, 113, 108, 0.15);">
+                            🔧
+                        </div>
+                        <h4>Ferretería & Materiales</h4>
+                        <p>Inventario de miles de SKUs, venta por kg o metros, presupuestos y control de stock con alertas de reposición.</p>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://ferreteria.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Ferretería & Materiales', 'demo@ferreteria.oseassoft.com', 'Demo2025!', 'http://ferreteria.oseassoft.com', 'linear-gradient(90deg,#78716c,#a8a29e)')">
                                 🔑 Probar Demo
                             </button>
                         </div>
