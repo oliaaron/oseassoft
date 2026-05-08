@@ -284,7 +284,8 @@
         </nav>
 
         <!-- Hero Section -->
-        <div id="hero" class="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
+        <div id="hero" class="relative overflow-hidden pt-32 pb-32 lg:pt-48 lg:pb-48 min-h-screen flex items-center">
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-4xl mx-auto">
                     <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
@@ -314,7 +315,8 @@
         </div>
 
         <!-- Demos Section -->
-        <div id="demos" class="py-24 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div id="demos" class="py-24 bg-slate-900">
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <span class="text-indigo-400 uppercase tracking-widest text-sm font-bold">Prueba Gratis</span>
