@@ -85,6 +85,7 @@
             .demo-profesional { --accent-color: #3b82f6; --accent-secondary: #60a5fa; }
             .demo-panaderia { --accent-color: #f59e0b; --accent-secondary: #fbbf24; }
             .demo-ferreteria { --accent-color: #78716c; --accent-secondary: #a8a29e; }
+            .demo-polleria { --accent-color: #ef4444; --accent-secondary: #f87171; }
             
             /* Badge */
             .badge-live {
@@ -457,9 +458,25 @@
                             </button>
                         </div>
                     </div>
-                    
-                </div>
-                
+                   
+                <div class="demo-card demo-polleria" style="cursor:default;">
+                        <span class="badge-live">En Vivo</span>
+                        <div class="demo-icon" style="background: rgba(190, 116, 54, 0.86);">
+                            🐔
+                        </div>
+                        <h4>Pollería &amp; Granja</h4>
+                        <p>Venta por kg con balanza, control de stock en kilos, presas, menudos y caja rápida para mostrador.</p>
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                            <a href="http://polleria.oseassoft.com" target="_blank" class="demo-btn">
+                                Ver Demo
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                            <button class="btn-probar" onclick="openDemoModal('Pollería El Gallinero', 'demo@polleria.oseassoft.com', 'Demo2025!', 'http://polleria.oseassoft.com', 'linear-gradient(90deg,#ef4444,#f87171)')">
+                                🔑 Probar Demo
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
                 
                 <div style="margin-top: 60px; margin-bottom: 50px; clear: both; width: 100%; display: block;">
@@ -726,6 +743,9 @@
                                 <option value="restaurante">Restaurante / Bar / Café</option>
                                 <option value="belleza">Peluquería / Spa / Estética</option>
                                 <option value="kiosco">Kiosco / Almacén / Despensa</option>
+                                <option value="panaderia">Panadería / Confitería</option>
+                                <option value="polleria">Pollería / Granja / Carnicería</option>
+                                <option value="ferreteria">Ferretería / Materiales</option>
                                 <option value="servicios">Servicios Profesionales</option>
                                 <option value="otro">Otro</option>
                             </select>
